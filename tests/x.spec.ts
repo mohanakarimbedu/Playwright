@@ -44,3 +44,9 @@ test.only('Drop Down Options', async ({ page }) => {
 
 })
 
+test.only('File Upload', async ({ page }) => {
+    
+    await page.goto('https://www.techlearn.in/demo-site');
+    await page.locator('input#file-1').setInputFiles('tests/testdata/abc.txt');
+})
+
