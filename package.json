@@ -10,8 +10,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.1",
+    "@types/node": "^26.6.5",
     "allure-playwright": "^3.12.2",
     "dotenv": "^17.4.2"
+  },
+  "dependencies": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-latest/xlsx-latest.tgz"
   }
 }

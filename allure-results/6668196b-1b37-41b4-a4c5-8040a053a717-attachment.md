@@ -1,0 +1,817 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test\spiceJetTestCase.spec.ts >> SpiceJetBooking_Ticket hyd to blr
+- Location: tests\test\spiceJetTestCase.spec.ts:9:9
+
+# Error details
+
+```
+Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+Call log:
+  - waiting for locator('xpath=(//*[@class="css-1dbjc4n r-14lw9ot r-11u4nky r-z2wwpe r-1phboty r-rs99b7 r-1loqt21 r-13awgt0 r-ymttw5 r-tju18j r-5njf8e r-1otgn73"])[2]')
+    - locator resolved to <div tabindex="0" data-focusable="true" class="css-1dbjc4n r-14lw9ot r-11u4nky r-z2wwpe r-1phboty r-rs99b7 r-1loqt21 r-13awgt0 r-ymttw5 r-tju18j r-5njf8e r-1otgn73">…</div>
+    - fill("blr")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e8]:
+          - link [ref=e11] [cursor=pointer]:
+            - /url: /
+            - img "sjlady" [ref=e13]
+          - link [ref=e16] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/SpiceMax.aspx
+          - link [ref=e19] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/VisaServices.aspx
+        - generic [ref=e20]:
+          - button [ref=e21] [cursor=pointer]
+          - button [ref=e22] [cursor=pointer]
+          - button [ref=e23] [cursor=pointer]
+      - generic [ref=e26]:
+        - generic [ref=e28] [cursor=pointer]
+        - generic [ref=e30]:
+          - generic [ref=e32]:
+            - generic [ref=e33] [cursor=pointer]: Add-ons
+            - generic:
+              - generic [ref=e38] [cursor=pointer]
+              - generic [ref=e44] [cursor=pointer]:
+                - generic [ref=e46]:
+                  - link "SpiceMax" [ref=e47]:
+                    - /url: https://corporate.spicejet.com/SpiceMax.aspx
+                  - link "SpiceCafé" [ref=e50]:
+                    - /url: https://corporate.spicejet.com/spiceCafe.aspx
+                - generic [ref=e54]:
+                  - link "You1st" [ref=e55]:
+                    - /url: https://corporate.spicejet.com/YouFirst.aspx
+                  - link "Visa Services" [ref=e58]:
+                    - /url: https://corporate.spicejet.com/VisaServices.aspx
+                - generic [ref=e62]:
+                  - link "SpiceAssurance" [ref=e63]:
+                    - /url: https://corporate.spicejet.com/SpiceAssurance.aspx
+                  - link "Friends and Family" [ref=e66]:
+                    - /url: https://corporate.spicejet.com/FamilyAndFriendOffer.aspx
+                - generic [ref=e70]:
+                  - link "Senior Citizen Discount" [ref=e71]:
+                    - /url: https://corporate.spicejet.com/SeniorCitizen.aspx
+                  - link "Student Discount" [ref=e74]:
+                    - /url: https://corporate.spicejet.com/StudentDiscountLanding.aspx
+                - generic [ref=e78]:
+                  - link "Extra Seat" [ref=e79]:
+                    - /url: https://corporate.spicejet.com/ExtraSeat.aspx
+                  - link "SpiceLock" [ref=e82]:
+                    - /url: https://corporate.spicejet.com/spicelock.aspx
+                - generic [ref=e86]:
+                  - link "Indian Armed Forces Personnel" [ref=e87]:
+                    - /url: https://corporate.spicejet.com/IAFPersonnel.aspx
+                  - link "SpiceFlex" [ref=e90]:
+                    - /url: https://corporate.spicejet.com/SpiceFlexFare.aspx
+                - generic [ref=e94]:
+                  - link "Govt. Employee" [ref=e95]:
+                    - /url: https://corporate.spicejet.com/GovtEmployee.aspx
+                  - link "SpicePlus" [ref=e98]:
+                    - /url: https://corporate.spicejet.com/spicePlus.aspx
+                - generic [ref=e102]:
+                  - link "FlyEarly" [ref=e103]:
+                    - /url: https://corporate.spicejet.com/FLYEarlyProductatAirports.aspx
+                  - link "Excess Baggage" [ref=e106]:
+                    - /url: https://corporate.spicejet.com/ExcessBaggage.aspx
+          - link "Deals" [ref=e109] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/RedHotOffers.aspx
+          - link "GiftCard" [ref=e112] [cursor=pointer]:
+            - /url: https://spicejet.woohoo.in/home
+          - generic [ref=e116]:
+            - generic [ref=e117] [cursor=pointer]: SpiceClub
+            - generic:
+              - generic [ref=e122] [cursor=pointer]
+              - generic [ref=e128] [cursor=pointer]:
+                - generic: About SpiceClub
+                - generic [ref=e133]:
+                  - link "Our Program" [ref=e135]:
+                    - /url: https://spiceclub.spicejet.com/home#program
+                  - link "Benefits" [ref=e139]:
+                    - /url: https://spiceclub.spicejet.com/home#benefits
+                  - link "Tiers" [ref=e143]:
+                    - /url: https://spiceclub.spicejet.com/home#tiers
+                - generic: SpiceClub Points
+                - generic [ref=e150]:
+                  - link "Earn Points" [ref=e152]:
+                    - /url: https://spiceclub.spicejet.com/howToEarn
+                  - link "Use Points" [ref=e156]:
+                    - /url: https://spiceclub.spicejet.com/howToUse
+                - generic: SpiceClub Exclusives
+                - generic [ref=e163]:
+                  - link "Credit Cards" [ref=e165]:
+                    - /url: https://spiceclub.spicejet.com/axisBank
+                  - link "Instant Vouchers" [ref=e169]:
+                    - /url: https://spiceclub.spicejet.com/instantVouchers
+          - link "SpiceScreen" [ref=e172] [cursor=pointer]:
+            - /url: https://spicescreen.com/
+          - link "Cargo" [ref=e175] [cursor=pointer]:
+            - /url: https://www.spicexpress.com
+          - link "Charter" [ref=e178] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/CharterLanding.aspx
+          - generic [ref=e182]:
+            - generic [ref=e183] [cursor=pointer]: Travel Policies
+            - generic:
+              - generic [ref=e188] [cursor=pointer]
+              - generic [ref=e194] [cursor=pointer]:
+                - link "Passenger Support" [ref=e196]:
+                  - /url: https://corporate.spicejet.com/PassengerSupport.aspx
+                - link "Passenger Rights" [ref=e200]:
+                  - /url: https://corporate.spicejet.com/PassengerRights.aspx
+                - link "Tariffs" [ref=e204]:
+                  - /url: https://corporate.spicejet.com/Content/pdf/Tariffs.pdf
+                - link "Baggage Information" [ref=e208]:
+                  - /url: https://corporate.spicejet.com/Baggage.aspx
+        - generic [ref=e211]:
+          - generic [ref=e212] [cursor=pointer]: Login
+          - link "Signup" [ref=e219] [cursor=pointer]:
+            - /url: https://spiceclub.spicejet.com/signup
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - generic [ref=e222] [cursor=pointer]: Flights
+          - generic [ref=e227] [cursor=pointer]: check-in
+          - generic [ref=e232] [cursor=pointer]: flight status
+          - generic [ref=e237] [cursor=pointer]: manage booking
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - generic [ref=e245]:
+              - generic [ref=e246]: Welcome aboard
+              - generic [ref=e247]: Let's go places!
+            - link "Book your Charter" [ref=e250] [cursor=pointer]:
+              - /url: https://corporate.spicejet.com/CharterLanding.aspx
+          - generic [ref=e258]:
+            - generic [ref=e259] [cursor=pointer]: one way
+            - generic [ref=e267] [cursor=pointer]: round trip
+          - generic [ref=e274]:
+            - generic [ref=e276] [cursor=pointer]:
+              - generic [ref=e277]: From
+              - textbox [ref=e279]: Hyderabad (HYD)
+            - generic [ref=e280] [cursor=pointer]
+            - generic [ref=e285]:
+              - generic [ref=e286] [cursor=pointer]:
+                - generic [ref=e287]: To
+                - textbox [active] [ref=e289]
+              - generic [ref=e295]:
+                - generic [ref=e296]: Select a region and city below
+                - generic [ref=e298]:
+                  - generic [ref=e299]:
+                    - generic [ref=e300]: Regions
+                    - generic [ref=e301]:
+                      - generic [ref=e302] [cursor=pointer]: India
+                      - generic [ref=e304] [cursor=pointer]: International
+                  - generic [ref=e306]:
+                    - generic [ref=e307]: Cities
+                    - generic [ref=e309]:
+                      - generic [ref=e310] [cursor=pointer]:
+                        - generic [ref=e311]:
+                          - generic [ref=e312]: Ahmedabad
+                          - generic [ref=e314]: Sardar Vallabhbhai Patel International Airport
+                        - generic [ref=e315]: AMD
+                      - generic [ref=e317] [cursor=pointer]:
+                        - generic [ref=e318]:
+                          - generic [ref=e319]: Amritsar
+                          - generic [ref=e321]: Sri Guru Ram Dass Jee International Airport
+                        - generic [ref=e322]: ATQ
+                      - generic [ref=e324] [cursor=pointer]:
+                        - generic [ref=e325]:
+                          - generic [ref=e326]: Aurangabad
+                          - generic [ref=e328]: Aurangabad Airport
+                        - generic [ref=e329]: IXU
+                      - generic [ref=e331] [cursor=pointer]:
+                        - generic [ref=e332]:
+                          - generic [ref=e333]: Ayodhya
+                          - generic [ref=e335]: Ayodhya Maharishi Valmiki Intl Airport
+                        - generic [ref=e336]: AYJ
+                      - generic [ref=e338] [cursor=pointer]:
+                        - generic [ref=e339]:
+                          - generic [ref=e340]: Bagdogra
+                          - generic [ref=e342]: Bagdogra International Airport
+                        - generic [ref=e343]: IXB
+                      - generic [ref=e345] [cursor=pointer]:
+                        - generic [ref=e346]:
+                          - generic [ref=e347]: Bengaluru
+                          - generic [ref=e349]: Kempegowda International Airport
+                        - generic [ref=e350]: BLR
+                      - generic [ref=e352] [cursor=pointer]:
+                        - generic [ref=e353]:
+                          - generic [ref=e354]: Bhavnagar
+                          - generic [ref=e356]: Bhavnagar Airport
+                        - generic [ref=e357]: BHU
+                      - generic [ref=e359] [cursor=pointer]:
+                        - generic [ref=e360]:
+                          - generic [ref=e361]: Chandigarh
+                          - generic [ref=e363]: Chandigarh International Airport
+                        - generic [ref=e364]: IXC
+                      - generic [ref=e366] [cursor=pointer]:
+                        - generic [ref=e367]:
+                          - generic [ref=e368]: Chennai
+                          - generic [ref=e370]: Chennai International Airport
+                        - generic [ref=e371]: MAA
+                      - generic [ref=e373] [cursor=pointer]:
+                        - generic [ref=e374]:
+                          - generic [ref=e375]: Darbhanga
+                          - generic [ref=e377]: Darbhanga Airport
+                        - generic [ref=e378]: DBR
+                      - generic [ref=e380] [cursor=pointer]:
+                        - generic [ref=e381]:
+                          - generic [ref=e382]: Dehradun
+                          - generic [ref=e384]: Dehradun Airport
+                        - generic [ref=e385]: DED
+                      - generic [ref=e387] [cursor=pointer]:
+                        - generic [ref=e388]:
+                          - generic [ref=e389]: Delhi
+                          - generic [ref=e391]: Indira Gandhi International Airport
+                        - generic [ref=e392]: DEL
+                      - generic [ref=e394] [cursor=pointer]:
+                        - generic [ref=e395]:
+                          - generic [ref=e396]: Dharamshala
+                          - generic [ref=e398]: Kangra Airport
+                        - generic [ref=e399]: DHM
+                      - generic [ref=e401] [cursor=pointer]:
+                        - generic [ref=e402]:
+                          - generic [ref=e403]: Goa
+                          - generic [ref=e405]: Goa International Airport
+                        - generic [ref=e406]: GOI
+                      - generic [ref=e408] [cursor=pointer]:
+                        - generic [ref=e409]:
+                          - generic [ref=e410]: Goa
+                          - generic [ref=e412]: North Goa
+                        - generic [ref=e413]: GOX
+                      - generic [ref=e415] [cursor=pointer]:
+                        - generic [ref=e416]:
+                          - generic [ref=e417]: Gorakhpur
+                          - generic [ref=e419]: Mahayogi Gorakhnath Airport
+                        - generic [ref=e420]: GOP
+                      - generic [ref=e422] [cursor=pointer]:
+                        - generic [ref=e423]:
+                          - generic [ref=e424]: Guwahati
+                          - generic [ref=e426]: Lokpriya Gopinath Bordoloi International Airport
+                        - generic [ref=e427]: GAU
+                      - generic [ref=e429] [cursor=pointer]:
+                        - generic [ref=e430]:
+                          - generic [ref=e431]: Imphal
+                          - generic [ref=e433]: Bir Tikendrajit International Airport
+                        - generic [ref=e434]: IMF
+                      - generic [ref=e436] [cursor=pointer]:
+                        - generic [ref=e437]:
+                          - generic [ref=e438]: Indore
+                          - generic [ref=e440]: Devi Ahilyabai Holkar International Airport
+                        - generic [ref=e441]: IDR
+                      - generic [ref=e443] [cursor=pointer]:
+                        - generic [ref=e444]:
+                          - generic [ref=e445]: Jaipur
+                          - generic [ref=e447]: Jaipur International Airport
+                        - generic [ref=e448]: JAI
+                      - generic [ref=e450] [cursor=pointer]:
+                        - generic [ref=e451]:
+                          - generic [ref=e452]: Jaisalmer
+                          - generic [ref=e454]: Jaisalmer Airport
+                        - generic [ref=e455]: JSA
+                      - generic [ref=e457] [cursor=pointer]:
+                        - generic [ref=e458]:
+                          - generic [ref=e459]: Jalandhar
+                          - generic [ref=e461]: Adampur Airport
+                        - generic [ref=e462]: AIP
+                      - generic [ref=e464] [cursor=pointer]:
+                        - generic [ref=e465]:
+                          - generic [ref=e466]: Jammu
+                          - generic [ref=e468]: Jammu Airport
+                        - generic [ref=e469]: IXJ
+                      - generic [ref=e471] [cursor=pointer]:
+                        - generic [ref=e472]:
+                          - generic [ref=e473]: Jodhpur
+                          - generic [ref=e475]: Jodhpur Airport
+                        - generic [ref=e476]: JDH
+                      - generic [ref=e478] [cursor=pointer]:
+                        - generic [ref=e479]:
+                          - generic [ref=e480]: Kandla
+                          - generic [ref=e482]: Kandla Airport
+                        - generic [ref=e483]: IXY
+                      - generic [ref=e485] [cursor=pointer]:
+                        - generic [ref=e486]:
+                          - generic [ref=e487]: Kanpur
+                          - generic [ref=e489]: Kanpur Airport
+                        - generic [ref=e490]: KNU
+                      - generic [ref=e492] [cursor=pointer]:
+                        - generic [ref=e493]:
+                          - generic [ref=e494]: Khajuraho
+                          - generic [ref=e496]: Khajuraho Airport
+                        - generic [ref=e497]: HJR
+                      - generic [ref=e499] [cursor=pointer]:
+                        - generic [ref=e500]:
+                          - generic [ref=e501]: Kochi
+                          - generic [ref=e503]: Cochin International Airport
+                        - generic [ref=e504]: COK
+                      - generic [ref=e506] [cursor=pointer]:
+                        - generic [ref=e507]:
+                          - generic [ref=e508]: Kolkata
+                          - generic [ref=e510]: Netaji Subhash Chandra Bose International Airport
+                        - generic [ref=e511]: CCU
+                      - generic [ref=e513] [cursor=pointer]:
+                        - generic [ref=e514]:
+                          - generic [ref=e515]: Kozhikode
+                          - generic [ref=e517]: Kozhikode International Airport
+                        - generic [ref=e518]: CCJ
+                      - generic [ref=e520] [cursor=pointer]:
+                        - generic [ref=e521]:
+                          - generic [ref=e522]: Leh
+                          - generic [ref=e524]: Leh Kushok Bakula Rimpochee Airport
+                        - generic [ref=e525]: IXL
+                      - generic [ref=e527] [cursor=pointer]:
+                        - generic [ref=e528]:
+                          - generic [ref=e529]: Lucknow
+                          - generic [ref=e531]: Chaudhary Charan Singh International Airport
+                        - generic [ref=e532]: LKO
+                      - generic [ref=e534] [cursor=pointer]:
+                        - generic [ref=e535]:
+                          - generic [ref=e536]: Madurai
+                          - generic [ref=e538]: Madurai Airport
+                        - generic [ref=e539]: IXM
+                      - generic [ref=e541] [cursor=pointer]:
+                        - generic [ref=e542]:
+                          - generic [ref=e543]: Mumbai
+                          - generic [ref=e545]: Chhatrapati Shivaji Maharaj International Airport
+                        - generic [ref=e546]: BOM
+                      - generic [ref=e548] [cursor=pointer]:
+                        - generic [ref=e549]:
+                          - generic [ref=e550]: Nagpur
+                          - generic [ref=e552]: Dr. Babasaheb Ambedkar International Airport
+                        - generic [ref=e553]: NAG
+                      - generic [ref=e555] [cursor=pointer]:
+                        - generic [ref=e556]:
+                          - generic [ref=e557]: Patna
+                          - generic [ref=e559]: Jay Prakash Narayan International Airport
+                        - generic [ref=e560]: PAT
+                      - generic [ref=e562] [cursor=pointer]:
+                        - generic [ref=e563]:
+                          - generic [ref=e564]: Porbandar
+                          - generic [ref=e566]: Porbandar Airport
+                        - generic [ref=e567]: PBD
+                      - generic [ref=e569] [cursor=pointer]:
+                        - generic [ref=e570]:
+                          - generic [ref=e571]: Port Blair
+                          - generic [ref=e573]: Veer Savarkar International Airport
+                        - generic [ref=e574]: IXZ
+                      - generic [ref=e576] [cursor=pointer]:
+                        - generic [ref=e577]:
+                          - generic [ref=e578]: Prayagraj
+                          - generic [ref=e580]: Prayagraj Airport
+                        - generic [ref=e581]: IXD
+                      - generic [ref=e583] [cursor=pointer]:
+                        - generic [ref=e584]:
+                          - generic [ref=e585]: Pune
+                          - generic [ref=e587]: Pune International Airport
+                        - generic [ref=e588]: PNQ
+                      - generic [ref=e590] [cursor=pointer]:
+                        - generic [ref=e591]:
+                          - generic [ref=e592]: Raipur
+                          - generic [ref=e594]: Swami Vivekananda Airport
+                        - generic [ref=e595]: RPR
+                      - generic [ref=e597] [cursor=pointer]:
+                        - generic [ref=e598]:
+                          - generic [ref=e599]: Shillong
+                          - generic [ref=e601]: Shillong Airport
+                        - generic [ref=e602]: SHL
+                      - generic [ref=e604] [cursor=pointer]:
+                        - generic [ref=e605]:
+                          - generic [ref=e606]: Shivamogga
+                          - generic [ref=e608]: Shivamogga
+                        - generic [ref=e609]: RQY
+                      - generic [ref=e611] [cursor=pointer]:
+                        - generic [ref=e612]:
+                          - generic [ref=e613]: Srinagar
+                          - generic [ref=e615]: Sheikh Ul-Alam International Airport Srinagar
+                        - generic [ref=e616]: SXR
+                      - generic [ref=e618] [cursor=pointer]:
+                        - generic [ref=e619]:
+                          - generic [ref=e620]: Surat
+                          - generic [ref=e622]: Surat International Airport
+                        - generic [ref=e623]: STV
+                      - generic [ref=e625] [cursor=pointer]:
+                        - generic [ref=e626]:
+                          - generic [ref=e627]: Thiruvananthapuram
+                          - generic [ref=e629]: Trivandrum International Airport
+                        - generic [ref=e630]: TRV
+                      - generic [ref=e632] [cursor=pointer]:
+                        - generic [ref=e633]:
+                          - generic [ref=e634]: Tirupati
+                          - generic [ref=e636]: Tirupati International Airport
+                        - generic [ref=e637]: TIR
+                      - generic [ref=e639] [cursor=pointer]:
+                        - generic [ref=e640]:
+                          - generic [ref=e641]: Tuticorin
+                          - generic [ref=e643]: Tuticorin Airport
+                        - generic [ref=e644]: TCR
+                      - generic [ref=e646] [cursor=pointer]:
+                        - generic [ref=e647]:
+                          - generic [ref=e648]: Udaipur
+                          - generic [ref=e650]: Maharana Pratap Airport
+                        - generic [ref=e651]: UDR
+                      - generic [ref=e653] [cursor=pointer]:
+                        - generic [ref=e654]:
+                          - generic [ref=e655]: Varanasi
+                          - generic [ref=e657]: Lal Bahadur Shastri International Airport
+                        - generic [ref=e658]: VNS
+                      - generic [ref=e660] [cursor=pointer]:
+                        - generic [ref=e661]:
+                          - generic [ref=e662]: Vishakhapatnam
+                          - generic [ref=e664]: Visakhapatnam International Airport
+                        - generic [ref=e665]: VTZ
+          - generic [ref=e669]:
+            - generic [ref=e670] [cursor=pointer]:
+              - generic [ref=e671]: Departure Date
+              - generic [ref=e672]: Fri, 23 Oct 2026
+            - generic [ref=e677] [cursor=pointer]:
+              - generic [ref=e678]: Return Date
+              - generic [ref=e679]: Select Date
+          - generic [ref=e684]:
+            - generic [ref=e687] [cursor=pointer]:
+              - generic [ref=e688]: Passengers
+              - generic [ref=e689]: 1 Adult
+            - generic [ref=e695] [cursor=pointer]:
+              - generic [ref=e696]: Currency
+              - generic [ref=e697]: INR
+          - generic [ref=e706]:
+            - generic [ref=e707]: Family & Friends
+            - generic [ref=e715]: Senior Citizen
+            - generic [ref=e723]: Unaccompanied Minor
+            - generic [ref=e731]: Students
+            - generic [ref=e739]: Armed Forces
+            - generic [ref=e747]: Govt. Employee
+            - link "Special Assistance" [ref=e755] [cursor=pointer]:
+              - /url: https://corporate.spicejet.com/SpecialAssistance.aspx
+          - generic [ref=e767]: Search Flight
+      - generic [ref=e772]:
+        - generic [ref=e774] [cursor=pointer]
+        - generic [ref=e780]:
+          - generic [ref=e781]:
+            - generic [ref=e783]:
+              - text: Due to the onset of the summer schedule from 29 March, flight timings may change. Passengers are advised to check their flight status before departure.
+              - link [ref=e784] [cursor=pointer]:
+                - /url: ""
+            - generic [ref=e786]:
+              - text: Due to ongoing developments in the Middle East region, some flights may be impacted. Please check your
+              - link "flight status" [ref=e787] [cursor=pointer]:
+                - /url: https://www.spicejet.com/#status
+              - text: for updates.
+            - generic [ref=e789]:
+              - text: Passengers carrying arms & ammunition must request clearance at least 72 hours before departure. Email custrelations@spicejet.com for assistance.
+              - link "Read more" [ref=e790] [cursor=pointer]:
+                - /url: " https://corporate.spicejet.com/Tnc.aspx"
+              - text: .
+            - generic [ref=e792]:
+              - text: Use our
+              - link "Change Assist" [ref=e793] [cursor=pointer]:
+                - /url: https://changes.spicejet.com/index.html#/
+              - text: portal for easy rescheduling or refunds for your affected flight.
+            - generic [ref=e795]:
+              - text: Only 1 piece of hand baggage of up to 7 kg is permitted on all SpiceJet flights. Power banks/portable mobile chargers are ONLY allowed in Cabin Baggage. E-cigarettes are prohibited to be carried in Cabin as well as Checked-in Baggage.
+              - link [ref=e796] [cursor=pointer]:
+                - /url: ""
+            - generic [ref=e798]:
+              - text: With DigiYatra, enjoy quick and easy entry to the airport, and pre-security check with your face as your boarding pass for the next SpiceJet flight at select cities.
+              - link "Know more." [ref=e799] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Digiyatra.aspx
+          - generic [ref=e801]:
+            - generic [ref=e802] [cursor=pointer]
+            - generic [ref=e803] [cursor=pointer]
+            - generic [ref=e804] [cursor=pointer]
+            - generic [ref=e805] [cursor=pointer]
+            - generic [ref=e806] [cursor=pointer]
+            - generic [ref=e807] [cursor=pointer]
+        - generic [ref=e809] [cursor=pointer]
+      - generic [ref=e812]:
+        - generic [ref=e813]: I Am Here For...
+        - generic [ref=e814]:
+          - link "sjlady Change Assist (Choose alternate flight or refund for changed/cancelled flights)" [ref=e815] [cursor=pointer]:
+            - /url: https://changes.spicejet.com/index.html#/
+            - generic [ref=e816]:
+              - img "sjlady" [ref=e818]
+              - generic [ref=e819]:
+                - generic [ref=e820]: Change Assist
+                - generic [ref=e821]: (Choose alternate flight
+                - generic [ref=e822]: or refund for
+                - generic [ref=e823]: changed/cancelled flights)
+          - link "sjlady SpiceClub" [ref=e824] [cursor=pointer]:
+            - /url: https://spiceclub.spicejet.com/
+            - generic [ref=e825]:
+              - img "sjlady" [ref=e827]
+              - generic [ref=e828]: SpiceClub
+          - link "sjlady SpiceJet Axis Bank Credit Card" [ref=e830] [cursor=pointer]:
+            - /url: https://spiceclub.spicejet.com/axisBank
+            - generic [ref=e831]:
+              - img "sjlady" [ref=e833]
+              - generic [ref=e834]: SpiceJet Axis Bank Credit Card
+          - link "sjlady Visa Services" [ref=e836] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/VisaServices.aspx
+            - generic [ref=e837]:
+              - img "sjlady" [ref=e839]
+              - generic [ref=e840]: Visa Services
+          - link "sjlady GST Invoice" [ref=e842] [cursor=pointer]:
+            - /url: ""
+            - generic [ref=e843]:
+              - img "sjlady" [ref=e845]
+              - generic [ref=e846]: GST Invoice
+      - link "Spin to Win" [ref=e848] [cursor=pointer]:
+        - /url: ""
+        - generic [ref=e850]:
+          - generic [ref=e851]: Spin to Win
+          - generic [ref=e852]:
+            - link:
+              - /url: ""
+      - generic [ref=e855]:
+        - generic [ref=e856]: Irresistible Deals
+        - generic [ref=e858]:
+          - generic [ref=e860]:
+            - generic [ref=e861]: SpiceMax
+            - generic [ref=e862]: The best seat in the sky at
+            - generic [ref=e863]: 30% Off
+            - generic [ref=e869]: SMAX30
+            - generic [ref=e870]: Valid till:September 30, 2026
+          - generic [ref=e872]:
+            - generic [ref=e873]: Enjoy ADDONS at
+            - generic [ref=e874]: Upto
+            - generic [ref=e875]: 25% Off
+            - generic [ref=e881]: ADDON25
+            - generic [ref=e882]: Valid till:March 31, 2027
+        - generic [ref=e883]: Explore More
+      - generic [ref=e885]:
+        - generic [ref=e886]: Recommended Add-Ons
+        - generic [ref=e891]:
+          - link "SpiceMax Upgrade your flying experience with more space and a host of convenient services and priority privileges." [ref=e893] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/spiceMax.aspx
+            - generic [ref=e894]:
+              - generic [ref=e898]: SpiceMax
+              - generic [ref=e899]: Upgrade your flying experience with more space and a host of convenient services and priority privileges.
+          - link "SpiceCafé Pamper your taste buds with our variety of delicious hot meals and sandwiches." [ref=e901] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/spiceCafe.aspx
+            - generic [ref=e902]:
+              - generic [ref=e906]: SpiceCafé
+              - generic [ref=e907]: Pamper your taste buds with our variety of delicious hot meals and sandwiches.
+          - link "Excess Baggage Avoid last-minute baggage hassles at the airport by pre-booking your excess baggage now and save up to 10%!" [ref=e909] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/ExcessBaggage.aspx
+            - generic [ref=e910]:
+              - generic [ref=e914]: Excess Baggage
+              - generic [ref=e915]: Avoid last-minute baggage hassles at the airport by pre-booking your excess baggage now and save up to 10%!
+          - link "You1st Enjoy Priority Check-in, Boarding & Baggage Delivery for just ₹595/₹699 (Domestic/International)!" [ref=e917] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/YouFirst.aspx
+            - generic [ref=e918]:
+              - generic [ref=e922]: You1st
+              - generic [ref=e924]: Enjoy Priority Check-in, Boarding & Baggage Delivery for just ₹595/₹699 (Domestic/International)!
+          - link "Extra Seat Enjoy added privacy, extra space, and up to 10kg additional baggage allowance with an extra seat or row!" [ref=e926] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/ExtraSeat.aspx
+            - generic [ref=e927]:
+              - generic [ref=e931]: Extra Seat
+              - generic [ref=e932]: Enjoy added privacy, extra space, and up to 10kg additional baggage allowance with an extra seat or row!
+          - link "SpicePlus Enjoy priority services with a meal and beverage at ₹500. Add your preferred seat for an extra cost." [ref=e934] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/spicePlus.aspx
+            - generic [ref=e935]:
+              - generic [ref=e939]: SpicePlus
+              - generic [ref=e940]: Enjoy priority services with a meal and beverage at ₹500. Add your preferred seat for an extra cost.
+      - generic [ref=e943]:
+        - generic [ref=e944]: Tailor-made For You
+        - generic [ref=e946]:
+          - link "Group Bookings Quick responses, effortless tracking, and a seamless booking journey." [ref=e948] [cursor=pointer]:
+            - /url: https://groups.spicejet.com/
+            - generic [ref=e949]:
+              - generic [ref=e950]: Group Bookings
+              - generic [ref=e951]: Quick responses, effortless tracking, and a seamless booking journey.
+          - link "SME High Flyer Exclusive fares, flexible changes & premium perks for small and medium enterprises." [ref=e953] [cursor=pointer]:
+            - /url: https://sme.spicejet.com/Account/Login?ReturnUrl=%2FHome%2FLandingPage
+            - generic [ref=e954]:
+              - generic [ref=e955]: SME High Flyer
+              - generic [ref=e956]: Exclusive fares, flexible changes & premium perks for small and medium enterprises.
+          - link "Corporate Traveller Customised travel solutions for business professionals." [ref=e958] [cursor=pointer]:
+            - /url: https://corporate.spicejet.com/CorporateQueries.aspx
+            - generic [ref=e959]:
+              - generic [ref=e960]: Corporate Traveller
+              - generic [ref=e961]: Customised travel solutions for business professionals.
+      - generic [ref=e963]:
+        - generic [ref=e964]:
+          - generic [ref=e965]: SpiceClub Loyalty Program
+          - generic [ref=e967]:
+            - generic [ref=e970]: Join our frequent flyer program and enjoy unmatched rewards, added comforts and exclusive privileges.
+            - link "Know More" [ref=e971] [cursor=pointer]:
+              - /url: https://spiceclub.spicejet.com/
+        - generic [ref=e974]:
+          - generic [ref=e975]:
+            - generic [ref=e976]: As a member you get access to
+            - generic [ref=e977]:
+              - generic [ref=e980]:
+                - generic [ref=e981]: Free
+                - generic [ref=e982]: Flight Vouchers
+              - generic [ref=e986]:
+                - generic [ref=e987]: Earn
+                - generic [ref=e988]: SC Points
+              - generic [ref=e992]:
+                - generic [ref=e993]: Complimentary
+                - generic [ref=e994]: Upgrades
+          - link "Join SpiceClub" [ref=e1000] [cursor=pointer]:
+            - /url: https://spiceclub.spicejet.com/signup
+      - generic [ref=e1003]:
+        - generic [ref=e1008]:
+          - generic [ref=e1009]: Cargo
+          - generic [ref=e1011]: Small, Medium, Large & X-Large
+          - generic [ref=e1012]: Get your cargo shipped from one place to another at a convenient and cost-effective manner.
+          - generic [ref=e1013]: Book Now!
+        - generic [ref=e1019]:
+          - generic [ref=e1020]: Charter
+          - generic [ref=e1022]: Your private space in the sky
+          - generic [ref=e1023]: Now book a private charter for small groups or big.
+          - generic [ref=e1024]: Book Now!
+    - generic [ref=e1027]:
+      - generic [ref=e1028]:
+        - generic [ref=e1030]:
+          - generic [ref=e1031]:
+            - generic [ref=e1032]: About Us
+            - generic [ref=e1035]:
+              - link "Spice Route Magazine" [ref=e1037] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/SpiceRoute.aspx
+              - link "Corporate Overview" [ref=e1041] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/CorporateOverview.aspx
+              - link "Fleet" [ref=e1045] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Fleet.aspx
+              - link "Careers" [ref=e1049] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/careers.aspx
+              - link "Media Center" [ref=e1053] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/PressReleaseNews.aspx
+              - link "Awards and Applaud" [ref=e1057] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/AwardsandApplaud.aspx
+          - generic [ref=e1060]:
+            - generic [ref=e1061]: Contact Us
+            - generic [ref=e1064]:
+              - link "Airports" [ref=e1066] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Airports.aspx
+              - link "International Offices" [ref=e1070] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InternationalOffices.aspx
+              - link "Corporate Head Office" [ref=e1074] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/ContactUs.aspx
+              - link "Advertise with Us" [ref=e1078] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/MediaSale.aspx
+              - link "RFP" [ref=e1082] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Content/pdf/GSA-RFP.pdf
+          - generic [ref=e1085]:
+            - generic [ref=e1086]: Travel Info
+            - generic [ref=e1089]:
+              - link "Citizen's Charter" [ref=e1091] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Charter.aspx
+              - link "FAQ" [ref=e1095] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/GeneralAirTravelFaq.aspx
+              - link "Fitness To Fly Guideline" [ref=e1099] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Content/pdf/FitnessFlyGuidelines.pdf
+              - link "Flight Schedules" [ref=e1103] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Schedules.aspx
+              - link "Terms of Carriage" [ref=e1107] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Tnc.aspx
+              - link "Fees and Charges" [ref=e1111] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/FeesCharges.aspx
+              - link "Know Your Rights" [ref=e1115] [cursor=pointer]:
+                - /url: https://www.civilaviation.gov.in/ministry-documents/passenger-charter-of-rights
+              - link "Book Any Test From Any Lab" [ref=e1119] [cursor=pointer]:
+                - /url: http://flebo.in/
+              - link "Book Any Test From Any Lab in Delhi" [ref=e1123] [cursor=pointer]:
+                - /url: https://flebo.in/health/delhi/
+          - generic [ref=e1126]:
+            - generic [ref=e1127]: Investors
+            - generic [ref=e1130]:
+              - link "Corporate Governance" [ref=e1132] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorsCorporateGovernance.aspx
+              - link "Financial Information" [ref=e1136] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorsFinancialInformation.aspx
+              - link "Notices" [ref=e1140] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorsNotices.aspx
+              - link "Corporate Announcements" [ref=e1144] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorCorporateAnnouncements.aspx
+              - link "Shareholding Pattern" [ref=e1148] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorsShareholdingPattern.aspx
+              - link "Investor Services" [ref=e1152] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/InvestorServices.aspx
+              - link "Disclosure Regulation 46" [ref=e1156] [cursor=pointer]:
+                - /url: https://corporate.spicejet.com/Regulation46.aspx
+        - generic [ref=e1159]:
+          - generic [ref=e1161]:
+            - generic [ref=e1162]: "For Reservations or Customer Support:"
+            - generic [ref=e1163]:
+              - generic [ref=e1164]:
+                - generic [ref=e1165]: 📞
+                - generic [ref=e1166]: +91 (0)124 4983410 / +91 (0)124 7101600
+              - generic [ref=e1167]:
+                - generic [ref=e1168]: 📧
+                - link "custrelations@spicejet.com" [ref=e1170] [cursor=pointer]:
+                  - /url: mailto:custrelations@spicejet.com
+          - generic [ref=e1171]:
+            - generic [ref=e1172]: Follow us
+            - link [ref=e1173] [cursor=pointer]:
+              - /url: https://www.facebook.com/FlySpiceJet/
+            - link [ref=e1176] [cursor=pointer]:
+              - /url: https://twitter.com/flyspicejet
+            - link [ref=e1179] [cursor=pointer]:
+              - /url: "https://www.linkedin.com/company/spicejet-limited/ "
+            - link [ref=e1182] [cursor=pointer]:
+              - /url: https://www.instagram.com/spicejetairlines/?hl=en
+            - link [ref=e1185] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCldnpuM5Q-y11XGNpfh3k-A
+          - generic [ref=e1188]:
+            - generic [ref=e1189]: Download our mobile app
+            - generic [ref=e1191]:
+              - link [ref=e1192] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.vl.spicejet&hl=en
+              - link [ref=e1195] [cursor=pointer]:
+                - /url: https://itunes.apple.com/us/app/spicejet/id998319513?mt=8
+      - generic [ref=e1198]:
+        - generic [ref=e1199]: "Note:"
+        - generic [ref=e1200]: We log the IP addresses of the visitors on our website for security reasons.
+      - generic [ref=e1203]:
+        - generic [ref=e1204]:
+          - generic [ref=e1222]: © Copyright Spicejet India. All Rights Reserved
+          - generic [ref=e1223]: "Registered Office: SpiceJet Ltd, 319, Udyog Vihar, Phase IV, Gurgaon, Haryana - 122016"
+        - generic [ref=e1224]:
+          - generic [ref=e1225]: Home
+          - generic [ref=e1228]:
+            - generic [ref=e1229]: •
+            - link "Privacy Policy" [ref=e1230] [cursor=pointer]:
+              - /url: https://corporate.spicejet.com/PrivacyPolicy.aspx
+          - generic [ref=e1231]:
+            - generic [ref=e1232]: •
+            - link "Disclaimer" [ref=e1233] [cursor=pointer]:
+              - /url: "https://corporate.spicejet.com/Disclaimer.aspx "
+          - generic [ref=e1234]:
+            - generic [ref=e1235]: •
+            - link "GST Information" [ref=e1236] [cursor=pointer]:
+              - /url: https://corporate.spicejet.com/GstInformation.aspx
+          - generic [ref=e1237]:
+            - generic [ref=e1238]: •
+            - link "Sitemap" [ref=e1239] [cursor=pointer]:
+              - /url: https://corporate.spicejet.com/Sitemap.aspx
+  - generic [ref=e1240]: Family and Friends discount is applicable for a minimum of 2 passengers (excluding infant) on a single booking. Terms and conditions apply.
+  - generic [ref=e1244]: The special discounted fares are applicable to senior citizens, above the age of 60 years. To travel under this fare, the passenger must present a valid age proof at the SpiceJet check-in counter at the airport.
+  - generic [ref=e1248]: Children between the ages of 5 and 12 travelling alone are considered unaccompanied minors. Charges per minor for each domestic sector are INR 4999, and charges vary for each international sector, starting at INR 9999. This can be bought until 2hrs/3hrs (domestic/international) prior to departure. After booking, please fill out the Unaccompanied Minor Form and carry four printed copies to the airport.
+  - generic [ref=e1252]: Applicable for all students above the age of 12 years studying with a bonafide school/university. Limited inventory available. Valid photo ID and educational institute I-card need to be presented for verification at check-in. Bookings under this offer are refundable. Conditions apply.
+  - generic [ref=e1256]: Applicable for all serving and retired Indian Armed Forces personnel, Paramilitary Forces personnel and their dependent families. Limited inventory available. Valid photo ID and relevant military card need to be presented for verification at check-in. Conditions apply.
+  - generic [ref=e1260]: The fares are extended only to government officials for their official travel (those carrying a valid identity card). A valid identity card issued by the employer is a pre-requisite for travel under this offer and passengers will be required to produce the card at the SpiceJet check-in counter at the airport.
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from "@playwright/test";
+  2  | import path from 'path';
+  3  | import { readExcelFile } from '../../src/Utils/ExcelHelper';
+  4  | 
+  5  |    const filepath = path.resolve(process.cwd(), 'test_data', 'qa', 'Test_Data1.xlsx');
+  6  | 
+  7  | export interface BookingRecord {
+  8  |     fromCity: string;
+  9  |     toCity: string;
+  10 | }       
+  11 | export const records = readExcelFile(filepath) as unknown as BookingRecord[];
+  12 | 
+  13 | export class CheckInandOutCompleted {
+  14 | 
+  15 |     readonly page: Page;
+  16 |     readonly from: Locator;
+  17 |     readonly To: Locator;
+  18 |     readonly departure: Locator;
+  19 |     readonly from_Select_Date: Locator;
+  20 |     readonly returing: Locator;
+  21 |     readonly to_Select_Date: Locator;
+  22 | 
+  23 |     constructor(page: Page) {
+  24 |         this.page = page;
+  25 |         this.from = page.locator('//*[@id="main-container"]/div/div[1]/div[3]/div[2]/div[3]/div/div[1]/div[1]/div[2]/input');
+  26 |         this.To = page.locator('(//*[@class="css-1dbjc4n r-14lw9ot r-11u4nky r-z2wwpe r-1phboty r-rs99b7 r-1loqt21 r-13awgt0 r-ymttw5 r-tju18j r-5njf8e r-1otgn73"])[2]');
+  27 |         this.departure = page.locator('(//div[@class="css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep"])[3]');
+  28 |         this.from_Select_Date = page.locator('(//div[starts-with(@class,"css-76zvg2 r-homxoj r-ubezar r-16dba41")])[position() =14]');
+  29 |         this.returing = page.locator('(//div[@class="css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep"])[4]');
+  30 |         this.to_Select_Date = page.locator('(//div[starts-with(@class,"css-76zvg2 r-homxoj r-ubezar r-16dba41")])[position() = 32]');
+  31 |     }
+  32 | 
+  33 |     async spiceJet_Booking(fromCity: string, toCity: string) {
+  34 |         await this.from.fill(fromCity);
+> 35 |         await this.To.fill(toCity);
+     |                       ^ Error: locator.fill: Error: Element is not an <input>, <textarea>, <select> or [contenteditable] and does not have a role allowing [aria-readonly]
+  36 |     }
+  37 | 
+  38 |     async dates_Selection() {
+  39 |         await this.departure.click();
+  40 |         await this.from_Select_Date.click();
+  41 |         await this.returing.click();
+  42 |         await this.to_Select_Date.click();
+  43 |     }
+  44 | }
+```
