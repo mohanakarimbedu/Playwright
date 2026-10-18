@@ -4,9 +4,7 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "D:\\Selenium\\PlaywrightAI2026\\PWTS\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "tech.spec.ts",
-      "-g",
-      "Launch\\s+Browser\\s+and\\s+Open\\s+Application$"
+      "tests/test/AdvanceSpiceJet.spec.ts"
     ],
     "configFile": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\playwright.config.ts",
     "rootDir": "D:/Selenium/PlaywrightAI2026/PWTS/tests",
@@ -82,13 +80,13 @@
   },
   "suites": [
     {
-      "title": "tech.spec.ts",
-      "file": "tech.spec.ts",
+      "title": "test\\AdvanceSpiceJet.spec.ts",
+      "file": "test/AdvanceSpiceJet.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Launch Browser and Open Application",
+          "title": "spicejet hyd to blr",
           "ok": true,
           "tags": [],
           "tests": [
@@ -103,28 +101,38 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1091,
+                  "duration": 8882,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "Global beforeEach is running...\n"
+                    },
+                    {
+                      "text": "undefined\n"
+                    },
+                    {
+                      "text": "Global afterEach is running...\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-18T07:34:51.572Z",
+                  "startTime": "2026-10-18T18:31:46.452Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\test-finished-1.png"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\video.webm"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\trace.zip"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\\trace.zip"
                     }
                   ]
                 }
@@ -132,18 +140,18 @@
               "status": "expected"
             }
           ],
-          "id": "f4f161bc930287175bb7-8c735261624bd83d8236",
-          "file": "tech.spec.ts",
-          "line": 7,
-          "column": 5
+          "id": "f424e1deb7e531733119-3cd9f5cc1dfc8b490a0c",
+          "file": "test/AdvanceSpiceJet.spec.ts",
+          "line": 4,
+          "column": 9
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-18T07:34:51.251Z",
-    "duration": 1835.9689999999998,
+    "startTime": "2026-10-18T18:31:45.536Z",
+    "duration": 10985.018,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
