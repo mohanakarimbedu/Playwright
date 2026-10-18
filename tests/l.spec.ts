@@ -1,7 +1,7 @@
 import { test } from '@playwright/test'
 
 test('Different Click Operations Practice', async ({ page }) => {
-
+// Demo Git
     // await page.goto('https://the-internet.herokuapp.com/add_remove_elements/')
 
     // await page.getByRole('button', { name: 'Add Element' }).click() // Single Click

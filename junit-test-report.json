@@ -1,13 +1,13 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="12.799821">
-<testsuite name="sanvith.spec.ts" timestamp="2026-10-01T21:25:34.987Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="11.982" errors="0">
-<testcase name="Fill, Type, Clear, Check, Uncheck, Click" classname="sanvith.spec.ts" time="11.982">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="1.8359689999999997">
+<testsuite name="tech.spec.ts" timestamp="2026-10-18T07:34:51.275Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.091" errors="0">
+<testcase name="Launch Browser and Open Application" classname="tech.spec.ts" time="1.091">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\test-finished-1.png]]
+[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\video.webm]]
+[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\video.webm]]
 
-[[ATTACHMENT|test-results\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\trace.zip]]
+[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>

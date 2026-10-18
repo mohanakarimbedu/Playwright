@@ -1,8 +1,12 @@
-import {test} from '@playwright/test';
+import {test,chromium} from '@playwright/test';
+
+test('Launch Browser', async({page})=>{	
+
+})
 
 test('Launch Browser and Open Application', async({page})=>{
 
-	await page.goto('https://www.techlearn.in');
+	await page.goto('https://www.google.com');
 
 })
 
@@ -29,6 +33,25 @@ test('Clear Existing Data', async ({ page }) => {
      
     // No need to clear method use unlike Selenium
 })
+test('Fill, Type, Clear, Check, Uncheck, Click', async ({ page }) => {
+    await page.goto('https://www.bharatdigitalnews.com/wp-login.php')
+    await page.getByRole('textbox', { name: 'Username or Email Address' }).fill('Sanvith Dev')
+    await page.waitForTimeout(3000)
+    await page.getByLabel('Username or Email Address').fill('Karimbedu')
+    await page.waitForTimeout(3000)
+    await page.getByRole('textbox', { name: 'Username or Email Address' }).clear()
+    await page.waitForTimeout(3000)
+    await page.getByRole('textbox', { name: 'Username or Email Address' }).type('Sanvith Dev')
+    await page.waitForTimeout(3000)
+    await page.getByLabel('Username or Email Address').type('Karimbedu')
+    await page.waitForTimeout(3000)
+    await page.locator('[name="rememberme"]').check()
+    await page.waitForTimeout(3000)
+    await page.locator('[name="rememberme"]').uncheck();
+    await page.waitForTimeout(1000)
+    await page.locator('[name="wp-submit"]').click()
+    await page.waitForTimeout(2000)
+})
 
 test('Fill and  Click Differnt Way to wright', async ({ page }) => {
     await page.goto('https://www.bharatdigitalnews.com/wp-login.php');
@@ -45,20 +68,25 @@ test('Fill and  Click Differnt Way to wright', async ({ page }) => {
      
 })
 
-test('Select Drop Down Options', async ({ page }) => {
-    await page.goto('https://www.redmine.org/account/register');
-
-    //  await page.locator('#user_language').selectOption('Japanese (日本語)');
-    //  await page.locator("#user_language").selectOption({ index: 7 });
-    await page.locator('#user_language').selectOption({ value: 'he' });
+test('Select Drop Down Options Local', async ({ page }) => {
+    await page.goto('https://www.techlearn.in/practice/dropdown');
+// ### Visbile Text
+    //  await page.locator('.demo-select').selectOption('Kerala');  
+    //### Value
+    // await page.locator('#practice-state-select').selectOption({value:'KL'});
+    // ### Index
+    //  await page.locator('#practice-state-select').selectOption({index:6});
+    // ### Label
+  //  await page.locator('.demo-select').selectOption({label:'Kerala'})
+  
     // Multiple Options using value
-    await page.locator('#user_language').selectOption([{ value: 'he' }, { value: 'ja' }]);
+   // await page.locator('#practice-course-select').selectOption([{ value: 'api' }, { value: 'ai' }, {value:'automation'}]);
     // Multiple Options using label
-    await page.locator('#user_language').selectOption([{ label: 'Hebrew (עברית)' }, { label: 'Japanese (日本語)' }]);       
-})
+    await page.locator('#practice-course-select').selectOption([{ label: 'Mobile Testing' }, { label: 'Manual Testing' }]);       
+    await page.waitForTimeout(3000);})
 
 test('check box and click', async ({ page }) => {
-    await page.goto('https://www.techlearn.in/demo-site');
+    await page.goto('https://www.techlearn.in/practice/selection-practice');
 
     await page.getByLabel('Automation Testing').click();
 
@@ -68,29 +96,29 @@ test('check box and click', async ({ page }) => {
 })
 
 test('File Upload Feature', async ({ page }) => {
-    await page.goto('https://www.techlearn.in/demo-site');
+    await page.goto('https://www.techlearn.in/practice/upload-file');
     await page.waitForTimeout(3000);
-    await page.getByLabel('Attach supporting document').setInputFiles('D:/Arijit/TestNG.png');
+    await page.locator('#upload-photo').setInputFiles('D:/Selenium/Alerts.png');
     await page.waitForTimeout(3000);
 
     // Upload multiple files
 
-    await page.locator('input[type="file"]').setInputFiles([
+/*    await page.locator('input[type="file"]').setInputFiles([
   'test-data/resume.pdf',
   'test-data/photo.jpg'
-    ]);
+    ]); */
     
     // Not an important
 
     // File chooser approach : If clicking a button opens the file chooser
 
-    const fileChooserPromise = page.waitForEvent('filechooser');
+ /*   const fileChooserPromise = page.waitForEvent('filechooser');
 
     await page.getByRole('button', { name: 'Upload File' }).click();
 
     const fileChooser = await fileChooserPromise;
 
-    await fileChooser.setFiles('test-data/resume.pdf');
+    await fileChooser.setFiles('test-data/resume.pdf');  */
     
   //  Interview answer
 
@@ -156,24 +184,57 @@ export default defineConfig({
 })
 
 test('Alerts - Simple, Confirmation, Prompt', async ({ page }) => {
-    await page.goto('https://www.techlearn.in/demo-site');
+    await page.goto('https://www.techlearn.in/practice/alerts');
     await page.waitForTimeout(3000);
     // Simple Alert
-/*    page.once('dialog', alert => {
+   page.once('dialog', alert => {
         alert.accept();
    })
-    await page.getByRole('button', { name: 'Simple Alert' }).click(); */
+    await page.getByRole('button', { name: 'Simple Alert' }).click(); 
+
+await page.waitForTimeout(3000);
 
     // Confirmation Alert
     
     page.once('dialog', alert => {
+        //  alert.accept();
         alert.dismiss();
     })
 
-    await page.getByRole('button', { name: 'Confirm Dialog' }).click();
+    await page.getByRole('button', { name: 'Confirm Dialog' }).click();  
 
+    await page.waitForTimeout(3000);  
+    
+    
+       //Prompt Alert
+        page.on('dialog', dialog => {
+        //    expect(dialog.type()).toEqual('prompt')
+          //  expect(dialog.message()).toEqual('I am a JS prompt')
+            console.log(dialog.message())
+          //  expect(dialog.defaultValue()).toEqual('')// by default there is no text in the prompt
+            dialog.accept('Hello, Playwright!')// handle prompt by clicking ok button and
+                                                // passing some text in the prompt
+            
+        })
+  await page.getByRole('button', { name: 'Prompt Dialog' }).click();
+          
+        await page.waitForTimeout(3000);
+});
+  
+test('Iframes', async ({ page }) => {
+    await page.goto('https://www.techlearn.in/practice/iframes');
     await page.waitForTimeout(3000);
+   const iframe = page.frameLocator('//*[@id="root"]/div/main/section[2]/div/div[1]/section[1]/iframe');
+  await page.waitForTimeout(3000);
+  await iframe.getByPlaceholder('Enter your name').fill('Purushotham');
+  await page.waitForTimeout(3000);
+  });
 
-})
+
+
+
+
+
+
 
 

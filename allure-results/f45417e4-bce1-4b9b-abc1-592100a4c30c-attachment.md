@@ -1,0 +1,62 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: test\spiceJetTestCase.spec.ts >> SpiceJetBooking_Ticket
+- Location: tests\test\spiceJetTestCase.spec.ts:6:5
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for getByRole('radio')
+
+```
+
+# Test source
+
+```ts
+  1  | import { Page, Locator } from '@playwright/test';
+  2  | 
+  3  | export class DashboardPage { 
+  4  |     
+  5  |     readonly page: Page;
+  6  | 
+  7  |     readonly round_trip: Locator;
+  8  |     readonly oneWay: Locator;
+  9  | 
+  10 |     constructor(page: Page) { 
+  11 |         this.page = page;
+  12 |         // this.round_trip = page.locator('[data-testid="round-trip-radio-button"] circle');
+  13 |         this.round_trip = page.getByRole('radio'), { name: 'round trip' };
+  14 |         this.oneWay = page.getByRole('radio', { name: 'one way' });
+  15 |     }
+  16 | 
+  17 |     async goToUrl() { 
+  18 | 
+  19 |         if (process.env.TEST_EXECUTION_ENV_QA == 'qa') {
+  20 |             await this.page.goto(`${process.env.url}`);
+  21 |             // await this.page.keyboard.press('Escape');
+  22 |             console.log(`${process.env.Test_Execution_Env}`);
+  23 |         }
+  24 |         else if (process.env.TEST_EXECUTION_ENV_DEV == 'dev') {
+  25 |             await this.page.goto(`${process.env.devurl}`);
+  26 |             // await this.page.keyboard.press('Escape');
+  27 |         }
+  28 |        
+  29 |     }
+  30 | 
+  31 |     async Allround() { 
+  32 |         // await this.page.keyboard.press('Escape');
+  33 |         // await this.oneWay.click();
+> 34 |        await this.round_trip.click();
+     |                              ^ Error: locator.click: Target page, context or browser has been closed
+  35 | 
+  36 |     }
+  37 | } 
+```

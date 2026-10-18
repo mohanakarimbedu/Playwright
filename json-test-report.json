@@ -4,9 +4,9 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "D:\\Selenium\\PlaywrightAI2026\\PWTS\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "sanvith.spec.ts",
+      "tech.spec.ts",
       "-g",
-      "Fill,\\s+Type,\\s+Clear,\\s+Check,\\s+Uncheck,\\s+Click$"
+      "Launch\\s+Browser\\s+and\\s+Open\\s+Application$"
     ],
     "configFile": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\playwright.config.ts",
     "rootDir": "D:/Selenium/PlaywrightAI2026/PWTS/tests",
@@ -82,13 +82,13 @@
   },
   "suites": [
     {
-      "title": "sanvith.spec.ts",
-      "file": "sanvith.spec.ts",
+      "title": "tech.spec.ts",
+      "file": "tech.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Fill, Type, Clear, Check, Uncheck, Click",
+          "title": "Launch Browser and Open Application",
           "ok": true,
           "tags": [],
           "tests": [
@@ -103,28 +103,28 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11982,
+                  "duration": 1091,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-01T21:25:35.273Z",
+                  "startTime": "2026-10-18T07:34:51.572Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\\test-finished-1.png"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\\video.webm"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\sanvith-Fill-Type-Clear-Check-Uncheck-Click-Google-Chrome\\trace.zip"
+                      "path": "D:\\Selenium\\PlaywrightAI2026\\PWTS\\test-results\\tech-Launch-Browser-and-Open-Application-Google-Chrome\\trace.zip"
                     }
                   ]
                 }
@@ -132,9 +132,9 @@
               "status": "expected"
             }
           ],
-          "id": "7a97d1eeb769e6756ebf-5f8fa188d02b78cd0d01",
-          "file": "sanvith.spec.ts",
-          "line": 15,
+          "id": "f4f161bc930287175bb7-8c735261624bd83d8236",
+          "file": "tech.spec.ts",
+          "line": 7,
           "column": 5
         }
       ]
@@ -142,8 +142,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-01T21:25:34.959Z",
-    "duration": 12799.821,
+    "startTime": "2026-10-18T07:34:51.251Z",
+    "duration": 1835.9689999999998,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
