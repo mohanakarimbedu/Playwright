@@ -12,7 +12,6 @@ export class DashboardPage {
         this.oneWay = page.locator('circle').first();
     }
 
-
     async Allround() { 
         // await this.page.keyboard.press('Escape');
         await this.round_trip.click();
