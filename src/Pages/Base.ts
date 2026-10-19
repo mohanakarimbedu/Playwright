@@ -18,6 +18,6 @@ export class BasePage {
             await this.page.goto(`${process.env.devurl}`);
             // await this.page.keyboard.press('Escape');
         }
-       
+    
     }
 }

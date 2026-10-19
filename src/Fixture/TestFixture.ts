@@ -24,7 +24,9 @@ export const test = base.extend<{
     { auto: true }],
 
     basePage: async ({ page }, use) => {
-        await use(new BasePage(page));
+        // await use(new BasePage(page));
+        const basePage = new BasePage(page)
+        await use(basePage);
     },
     dashboardPage: async ({ page }, use) => {
         await use(new DashboardPage(page));

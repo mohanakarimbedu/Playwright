@@ -29,7 +29,7 @@ export class CheckInandOutCompleted {
         this.departure = page.locator('(//div[@class="css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep"])[3]');
         this.from_Select_Date = page.locator('(//div[@class="css-1dbjc4n r-1awozwy r-1pi2tsx r-1777fci r-13qz1uu"])[position() = 28]');
         this.returing = page.locator('(//div[@class="css-1dbjc4n r-1awozwy r-18u37iz r-1wtj0ep"])[4]');
-        this.to_Select_Date = page.locator('(//div[starts-with(@class,"css-76zvg2 r-homxoj r-ubezar r-16dba41")])[position() = 32]');
+        this.to_Select_Date = (page.locator('(//div[starts-with(@class,"css-76zvg2 r-homxoj r-ubezar r-16dba41")])[position() = 32]'));
     }
 
     async spiceJet_Booking(fromCity: string, toCity: string) {
