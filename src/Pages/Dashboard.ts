@@ -8,7 +8,7 @@ export class DashboardPage {
 
     constructor(page: Page) { 
         this.page = page;
-        this.round_trip = page.locator('[data-testid="round-trip-radio-button"] circle');
+        this.round_trip = page.locator('[data-testid="round-trip-radio-button"] circleXYZ');
         this.oneWay = page.locator('circle').first();
     }
 

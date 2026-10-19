@@ -1,13 +1,16 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="1.8359689999999997">
-<testsuite name="tech.spec.ts" timestamp="2026-10-18T07:34:51.275Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.091" errors="0">
-<testcase name="Launch Browser and Open Application" classname="tech.spec.ts" time="1.091">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.985018">
+<testsuite name="test\AdvanceSpiceJet.spec.ts" timestamp="2026-10-18T18:31:45.832Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="8.882" errors="0">
+<testcase name="spicejet hyd to blr" classname="test\AdvanceSpiceJet.spec.ts" time="8.882">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\test-finished-1.png]]
+<![CDATA[Global beforeEach is running...
+undefined
+Global afterEach is running...
 
-[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\video.webm]]
+[[ATTACHMENT|test-results\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\tech-Launch-Browser-and-Open-Application-Google-Chrome\trace.zip]]
+[[ATTACHMENT|test-results\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\test-AdvanceSpiceJet-spicejet-hyd-to-blr-Google-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>

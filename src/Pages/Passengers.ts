@@ -10,7 +10,6 @@ export class passengers_Details {
     readonly done: Locator;
     readonly currency: Locator;
     readonly currency_usd: Locator;
-    readonly family_friends: Locator;
     readonly search_flights: Locator;
 
     constructor(page: Page) { 
@@ -23,7 +22,6 @@ export class passengers_Details {
         this.currency = page.locator('[data-testid="application-id"]').getByText('Currency');
         this.currency_usd = page.locator('//div[text()="USD"]');
 
-        this.family_friends = page.getByText('Family & Friends')
         this.search_flights = page.locator('[data-testid="home-page-flight-cta"]')
 
     }
@@ -39,7 +37,6 @@ export class passengers_Details {
         await this.done.click();
         await this.currency.click();
         await this.currency_usd.click();
-        await this.family_friends.click();
         await this.search_flights.click();
     }
 
